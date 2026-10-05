@@ -1,0 +1,66 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+import javafx.application.Application;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.stage.Stage;
+
+public class SDGClimateActionPoster extends Application {
+
+    @Override
+    public void start(Stage stage) {
+
+        Label title = new Label("SDG 13: CLIMATE ACTION");
+        title.setFont(new Font("Arial", 28));
+        title.setTextFill(Color.WHITE);
+        title.setStyle("-fx-background-color: green; -fx-padding: 10;");
+
+        Label earth = new Label("🌍");
+        earth.setFont(new Font(80));
+
+        Label slogan = new Label("Take Urgent Action To Combat Climate Change");
+        slogan.setFont(new Font(20));
+        slogan.setTextFill(Color.DARKBLUE);
+
+        Label point1 = new Label("✔️ Plant More Trees");
+        point1.setTextFill(Color.GREEN);
+        point1.setFont(new Font(18));
+
+        Label point2 = new Label("✔️ Save Water");
+        point2.setTextFill(Color.BLUE);
+        point2.setFont(new Font(18));
+
+        Label point3 = new Label("✔️ Reduce Pollution");
+        point3.setTextFill(Color.RED);
+        point3.setFont(new Font(18));
+
+        Label point4 = new Label("✔️ Use Renewable Energy");
+        point4.setTextFill(Color.ORANGE);
+        point4.setFont(new Font(18));
+
+        VBox root = new VBox(15);
+        root.setAlignment(Pos.CENTER);
+        root.getChildren().addAll(
+                title, earth, slogan,
+                point1, point2, point3, point4
+        );
+
+        root.setStyle("-fx-background-color: lightyellow;");
+
+        Scene scene = new Scene(root, 700, 500);
+
+        stage.setTitle("SDG 13 Poster");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
